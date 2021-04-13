@@ -18,12 +18,12 @@ L_VAE  = (XX.^2 + YY.^2);
 L = 0.8*abs(XX).*abs(YY) + 0.2*(XX.^2 + YY.^2);
 subplot(1,2,1)
 surf(XX,YY, L_VAE)
-xlabel('$X_i$', 'interpreter', 'latex', 'fontsize', 16)
-ylabel('$X_j$', 'interpreter', 'latex', 'fontsize', 16)
+xlabel('$\mu_i$', 'interpreter', 'latex', 'fontsize', 16)
+ylabel('$\mu_j$', 'interpreter', 'latex', 'fontsize', 16)
 zlabel('$L$', 'interpreter', 'latex', 'fontsize', 16)
 
 subplot(1,2,2)
 surf(XX,YY, L)
-xlabel('$X_i$', 'interpreter', 'latex', 'fontsize', 16)
-ylabel('$X_j$', 'interpreter', 'latex', 'fontsize', 16)
+xlabel('$\mu_i$', 'interpreter', 'latex', 'fontsize', 16)
+ylabel('$\mu_j$', 'interpreter', 'latex', 'fontsize', 16)
 zlabel('$L$', 'interpreter', 'latex', 'fontsize', 16)

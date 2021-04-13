@@ -70,7 +70,7 @@ axis equal
 %% Save "punctured" data set and the hole removed as separate image sets
 m=4;
 for j = 1:length(data_full)
-%      figure('Renderer', 'painters', 'Position', [500 500 100 100])
+
     [x,y]=pol2cart(theta, R2(theta, data_full(j,1), data_full(j,2)));
 %     [x,y]=pol2cart(theta, R2(theta, data_punctured(j,1), data_punctured(j,2)));
     h=plot(x,y,'k','linewidth', 2)
@@ -87,7 +87,7 @@ for j = 1:length(data_full)
 %     imwrite(h, ['D:\Datasets\VAE_zeroshot\test\img_' sprintf('%04d',j)
 %     '.png'], 'PNG') %must be in image format not a plot
     close(h)
-%     pause(0.1)
+
 end
 %% make indices for the data in the hole and the punctured data to match up with linear image labels
 data_punctured_ind = find(dists>puncture_radius); %here the index itself is the file name and the value in the first column is the index of the corresponding point in data_full
